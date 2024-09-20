@@ -8,9 +8,9 @@ fetch(apiUrl)
     data.forEach((item) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.nama}</td>
-            <td>${item.harga}</td>
+            <td scope="row">${item.id}</td>
+            <td scope="row">${item.nama}</td>
+            <td scope="row">${item.harga}</td>
           `;
       tableBody.appendChild(row);
     });
