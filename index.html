@@ -3,26 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
     <title>Penjualan Produk</title>
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      table,
-      th,
-      td {
-        border: 1px solid black;
-      }
-      th,
-      td {
-        padding: 8px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
   </head>
   <body>
     <h1>Daftar Produk</h1>
@@ -39,25 +22,6 @@
       </tbody>
     </table>
 
-    <script>
-      const apiUrl =
-        "https://script.google.com/macros/s/AKfycbwcp9a47-QQ5RpCM3_lDir7dUliflEsAvKQKXO8xXn_XWmdXJG3eYYmb6gJCD2bfX2lmg/exec"; // Ganti dengan URL Google Apps Script
-
-      fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          const tableBody = document.getElementById("data-penjualan");
-          data.forEach((item) => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.nama}</td>
-            <td>${item.harga}</td>
-          `;
-            tableBody.appendChild(row);
-          });
-        })
-        .catch((error) => console.error("Error fetching data:", error));
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
